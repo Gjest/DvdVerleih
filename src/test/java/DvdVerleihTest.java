@@ -16,4 +16,16 @@ public class DvdVerleihTest {
         double expectedRent = 3.75;
         assertThat(expectedRent).isEqualTo(dvdv.getRentForDays(3));
     }
+
+    @Test
+    public void getRentForZeroDays(){
+        //Assume
+        double expectedRent = 0;
+
+        //Act
+        DvdVerleih dvdv = new DvdVerleih();
+
+        //Assert
+        assertThat(dvdv.getRentForDays(0)).isEqualTo(expectedRent);
+    }
 }
